@@ -1,0 +1,19 @@
+<div class="dialog-form">
+  <h2>
+    {{data.Id === 0? 'Add new company': "Update company"}}
+  </h2>
+  <div class="form-content">
+    <mat-form-field appearance="legacy">
+      <mat-label>Name</mat-label>
+      <input type="text" [(ngModel)]="data.Name" matInput >
+    </mat-form-field>
+    <mat-form-field appearance="legacy">
+      <mat-label>Website</mat-label>
+      <input type="text" [(ngModel)]="data.Website" matInput >
+    </mat-form-field>
+  </div>
+  <div class="form-action">
+    <button mat-raised-button color="primary" (click)="onSave(true)">Add</button>
+    <button mat-raised-button (click)="onSave(false)">Cancel</button>
+  </div>
+</div>

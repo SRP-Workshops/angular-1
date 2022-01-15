@@ -1,0 +1,29 @@
+<div class="container">
+  <mat-toolbar color="primary" class="example-toolbar">
+    <button id="menu" mat-icon-button (click)="snav.toggle()">
+      <mat-icon>menu</mat-icon>
+    </button>
+    <h1 class="example-app-name">App name</h1>
+  </mat-toolbar>
+
+  <mat-sidenav-container class="example-sidenav-container" >
+    <mat-sidenav #snav mode="side" opened="true">
+      <mat-nav-list>
+        <mat-list role="list">
+          <mat-list-item routerLink="/companies" >
+            <mat-icon mat-list-icon>border_color</mat-icon>
+            Company
+          </mat-list-item>
+          <mat-divider></mat-divider>
+          <mat-list-item routerLink="/customers" >
+            <mat-icon mat-list-icon>account_balance</mat-icon>
+            Customer
+          </mat-list-item>
+        </mat-list>
+      </mat-nav-list>
+    </mat-sidenav>
+    <mat-sidenav-content class="main-content">
+      <router-outlet></router-outlet>
+    </mat-sidenav-content>
+  </mat-sidenav-container>
+</div>

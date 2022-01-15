@@ -1,0 +1,27 @@
+.container {
+    height: 100vh;
+    position: relative;
+    width: 100%;
+}
+
+.example-toolbar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 2;
+}
+
+.example-sidenav-container {
+    position: relative;
+    padding-top: 65px;
+    height: 100vh;
+    padding-bottom: 40px;
+}
+
+mat-nav-list {
+    padding-top: 60px;
+}
+
+.main-content {
+    padding: 20px;
+}

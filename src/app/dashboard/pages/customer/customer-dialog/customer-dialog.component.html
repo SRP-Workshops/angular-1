@@ -1,0 +1,33 @@
+<div class="dialog-form">
+  <h2>
+    {{data ? 'Add new customer': "Update customer"}}
+  </h2>
+  <div class="form-content">
+    <mat-form-field appearance="legacy">
+      <mat-label>Name</mat-label>
+      <input type="text" [(ngModel)]="data.Name" matInput placeholder="">
+    </mat-form-field>
+    <mat-form-field appearance="fill">
+      <mat-label>Company name</mat-label>
+      <mat-select [value]="data.CompanyId" (selectionChange)="onChange($event)">
+        <mat-option [value]="item.Id" *ngFor="let item of companies"> {{item.Name}}</mat-option>
+      </mat-select>
+    </mat-form-field>
+    <mat-form-field appearance="legacy">
+      <mat-label>Address</mat-label>
+      <input type="text" [(ngModel)]="data.Address" matInput placeholder="">
+    </mat-form-field>
+    <mat-form-field appearance="legacy">
+      <mat-label>Email</mat-label>
+      <input type="text" [(ngModel)]="data.Email" matInput placeholder="">
+    </mat-form-field>
+    <mat-form-field appearance="legacy">
+      <mat-label>Phone</mat-label>
+      <input type="text" [(ngModel)]="data.Phone" matInput placeholder="">
+    </mat-form-field>
+  </div>
+  <div class="form-action">
+    <button mat-raised-button color="primary" (click)="onSave(true)">Add</button>
+    <button mat-raised-button (click)="onSave(false)">Cancel</button>
+  </div>
+</div>
